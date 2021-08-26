@@ -1,7 +1,15 @@
 require("@babel/register")({
-    presets: ["@babel/preset-env"],
+  presets: [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "10"
+        }
+      }
+    ]  ]
+    
   });
   
-  // Import the rest of our application.
-  module.exports = require("./app.js");
+module.exports = require("./app.js");
   
