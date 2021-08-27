@@ -12,7 +12,9 @@ const dataSchema = mongoose.Schema({
 
 const category = mongoose.Schema({
   Name: String,
-  ApiData: [dataSchema]
+  ApiData: [dataSchema],
 });
 
-export default mongoose.model("datas", category);
+const category_model = mongoose.model("Categories", category);
+
+export default category_model;
