@@ -1,14 +1,18 @@
 import mongoose from "mongoose";
 
 const dataSchema = mongoose.Schema({
-    
-    API:  String,
-    Link: String,
-    Description:String,    
-    Auth: Boolean,
-    Https: Boolean,
-    Cors: Boolean,
-    Category: String,
+  API: String,
+  Link: String,
+  Description: String,
+  Auth: String,
+  Https: Boolean,
+  Cors: String,
+  Category: String,
 });
 
-export default mongoose.model("datas", dataSchema);
+const category = mongoose.Schema({
+  Name: String,
+  ApiData: [dataSchema]
+});
+
+export default mongoose.model("datas", category);
