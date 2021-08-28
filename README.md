@@ -20,7 +20,7 @@
 
 
 ## Schema Details of Database
-```http
+```
   {
       {
          Name:"Animals",
