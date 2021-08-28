@@ -2,7 +2,6 @@ import express from "express";
 import mongoose, { model } from "mongoose";
 import cors from "cors";
 import dbModel from "./models/dbModel.js";
-import fetch from "node-fetch";
 import axios from "axios";
 import { show } from "./service/service.js";
 import deasync from "deasync";
@@ -21,7 +20,8 @@ app.get("/", (req, res) => {
 app.post("/senddata", function (req, res) {
   const body = req.body;
   console.log("body is", body);
- const model = {
+ 
+  const model = {
     Name : body[0].Category,
     ApiData : body
   }
