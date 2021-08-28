@@ -5,7 +5,7 @@ const dataSchema = mongoose.Schema({
   Link: String,
   Description: String,
   Auth: String,
-  Https: Boolean,
+  HTTPS: Boolean,
   Cors: String,
   Category: String,
 });
