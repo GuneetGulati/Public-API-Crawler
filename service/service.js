@@ -56,6 +56,15 @@ const show = async () => {
 
     for (let i = 0; i <finalcategories.length; i++) {
       let currdata = {};
+
+      if(finalcategories[i].includes('&'))
+      {
+        
+                let newStr = finalcategories[i].replace('&','%26');
+                finalcategories[i] = newStr;
+          console.log(finalcategories[i]);
+      }
+
       const catlink = `https://public-apis-api.herokuapp.com/api/v1/apis/entry?page=1&category=${finalcategories[i]}`;
       let arr = [];
       
