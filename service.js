@@ -1,4 +1,3 @@
-import categories from "./db";
 import axios from "axios";
 
 const tok = "https://public-apis-api.herokuapp.com/api/v1/auth/token";
@@ -7,9 +6,9 @@ let finalcategories = [];
 let i = 1;
 let limit = 9;
 let ct=1;
-
-
 var globalData;
+
+
 const keyfetch = async () => {
   try {
     const data = await axios(tok);
@@ -60,8 +59,8 @@ const show = async () => {
       if(finalcategories[i].includes('&'))
       {
         
-                let newStr = finalcategories[i].replace('&','%26');
-                finalcategories[i] = newStr;
+          let newStr = finalcategories[i].replace('&','%26');
+          finalcategories[i] = newStr;
           console.log(finalcategories[i]);
       }
 
